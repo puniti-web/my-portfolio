@@ -370,6 +370,11 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
         img: '/images/c5.png',
       },
       {
+        title: "Yuvamanthan Internal Hackhathon",
+        org: 'IIC,VIT',
+        img: '/images/yuva.png',
+      },
+      {
         title: "Internship Completion Certificate",
         org: 'Bluestock',
         img: '/images/c6.jpg',
