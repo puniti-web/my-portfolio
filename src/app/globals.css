@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 :root {
   --background: #ffffff;
@@ -20,7 +24,59 @@
 }
 
 body {
+  @apply bg-blue-900  text-white;
+
+  min-height: 100vh;
+  	font-family: Georgia, serif;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  animation: float-up 8s linear infinite;
+  z-index: 10;
+}
+/* Optional - for soft glowing background dots */
+.education-glow::before,
+.education-glow::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+.education-glow::before {
+  top: 20%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  background: #facc15; /* yellow */
+}
+
+.education-glow::after {
+  bottom: 10%;
+  right: 10%;
+  width: 250px;
+  height: 250px;
+  background: #60a5fa; /* blue */
 }
