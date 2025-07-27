@@ -52,41 +52,38 @@ export default function Home() {
     <p className="text-2xl sm:text-3xl">Welcome to my portfolio!</p>
 
     {/* Animated Heading */}
-    <div className="relative h-24">
-      <AnimatePresence mode="wait">
-        {!showName ? (
-          <motion.h1
-            key={currentWordIndex}
-            className="text-5xl sm:text-6xl font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            I&apos;m  <span className="text-blue-900">{words[currentWordIndex]}</span>
-          </motion.h1>
-        ) : (
-          <motion.h1
-            key="name"
-            className="text-5xl sm:text-6xl font-bold"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Hi, I am <span className="text-blue-900">Puniti Jodhwani</span>
-          </motion.h1>
-        )}
-      </AnimatePresence>
-    </div>
+    <div className="relative h-24 sm:h-28">
+  <AnimatePresence mode="wait">
+    {!showName ? (
+      <motion.h1
+        key={currentWordIndex}
+        className="text-[1.9rem] sm:text-5xl font-bold"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.5 }}
+      >
+        I&apos;m <span className="text-blue-900">{words[currentWordIndex]}</span>
+      </motion.h1>
+    ) : (
+      <motion.h1
+        key="name"
+        className="text-[1.9rem] sm:text-5xl font-bold"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Hi, I am <span className="text-blue-900">Puniti Jodhwani</span>
+      </motion.h1>
+    )}
+  </AnimatePresence>
+</div>
 
-    {/* Description */}
-    <p className="text-xl sm:text-2xl max-w-screen">
-       Turning tech into experiences. Building with code, leading with clarity.
-       <br></br>
-        A passionate Web Developer & GenAI enthusiast crafting modern, responsive, and accessible web experiences.     
-    </p>
-   
-
+<p className="text-xl sm:text-2xl mt-1">
+  Turning tech into experiences. Building with code, leading with clarity.
+  <br />
+  A passionate Web Developer & GenAI enthusiast crafting modern, responsive, and accessible web experiences.
+</p>
 
     {/* Buttons */}
     <div className="flex flex-wrap justify-center gap-4 mt-4">
