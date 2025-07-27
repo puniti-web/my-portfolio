@@ -94,12 +94,12 @@ export default function Home() {
   {/* <h1 className="text-4xl md:text-6xl font-bold mb-4">
     Hi, I'm <span className="text-yellow-400">Puniti Jodhwani</span>
   </h1> */}
-  <p className="text-2xl md:text-2xl mb-6 text-justify">
-    <p>I&apos;m a 3<sup>rd</sup> Year CSE student</p>
+  <p className="text-2xl md:text-2xl mb-6 ">
+    <p>I&apos;m a 3<sup>rd</sup> Year CSE student
     at VIT,Vellore.With a background in Bioinformatics, I bridge the gap between biology and technology, 
     bringing a unique perspective to problem-solving in the tech world.My journey in web development started with curiosity and quickly turned into a deep interest in creating user-friendly, accessible interfaces.
 
-Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exploring creative ways to connect technology with real-world impact. I am always looking to grow, take on new challenges, and contribute to projects that inspire change.
+Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exploring creative ways to connect technology with real-world impact. I am always looking to grow, take on new challenges, and contribute to projects that inspire change.</p>
     
   </p>
 

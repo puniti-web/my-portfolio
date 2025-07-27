@@ -20,11 +20,11 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <ul className="hidden md:flex gap-8 text-3xl font-medium">
-          <li><a href="#about" className="hover:text-[#CCD5AE]">About</a></li>
-          <li><a href="#projects" className="hover:text-[#CCD5AE]">Projects</a></li>
-          <li><a href="#skills" className="hover:text-[#CCD5AE]">Skills</a></li>
-          <li><a href="#contact" className="hover:text-[#CCD5AE]">Contact</a></li>
-          <li><a href="#certifications" className="hover:text-[#CCD5AE]">Certifications</a></li>
+          <li><a href="#about" className="hover:text-white">About</a></li>
+          <li><a href="#projects" className="hover:text-white">Projects</a></li>
+          <li><a href="#skills" className="hover:text-white">Skills</a></li>
+          <li><a href="#contact" className="hover:text-white">Contact</a></li>
+          <li><a href="#certifications" className="hover:text-white">Certifications</a></li>
         </ul>
 
         {/* Hamburger Icon */}
@@ -39,11 +39,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden fixed top-[88px] left-1/2 -translate-x-1/2 w-[90%] bg-[#BFCBCE] rounded-xl py-4 px-6 space-y-4 text-center shadow-lg text-blue-900 text-lg font-medium z-40">
-          <li><a href="#about" className="block hover:text-[#CCD5AE]">About</a></li>
-          <li><a href="#projects" className="block hover:text-[#CCD5AE]">Projects</a></li>
-          <li><a href="#skills" className="block hover:text-[#CCD5AE]">Skills</a></li>
-          <li><a href="#contact" className="block hover:text-[#CCD5AE]">Contact</a></li>
-          <li><a href="#certifications" className="block hover:text-[#CCD5AE]">Certifications</a></li>
+          <li><a href="#about" className="block hover:text-white">About</a></li>
+          <li><a href="#projects" className="block hover:text-white">Projects</a></li>
+          <li><a href="#skills" className="block hover:text-white">Skills</a></li>
+          <li><a href="#contact" className="block hover:text-white">Contact</a></li>
+          <li><a href="#certifications" className="block hover:text-white">Certifications</a></li>
         </ul>
       )}
     </>
