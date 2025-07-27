@@ -95,7 +95,8 @@ export default function Home() {
     Hi, I'm <span className="text-yellow-400">Puniti Jodhwani</span>
   </h1> */}
   <p className="text-2xl md:text-2xl mb-6 text-justify">
-    I'm a 3<sup>rd</sup> Year CSE student at VIT,Vellore.With a background in Bioinformatics, I bridge the gap between biology and technology, 
+    <p>I&apos;m a 3<sup>rd</sup> Year CSE student</p>
+    at VIT,Vellore.With a background in Bioinformatics, I bridge the gap between biology and technology, 
     bringing a unique perspective to problem-solving in the tech world.My journey in web development started with curiosity and quickly turned into a deep interest in creating user-friendly, accessible interfaces.
 
 Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exploring creative ways to connect technology with real-world impact. I'm always looking to grow, take on new challenges, and contribute to projects that inspire change.
