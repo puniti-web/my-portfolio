@@ -63,7 +63,7 @@ export default function Home() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            I'm  <span className="text-blue-900">{words[currentWordIndex]}</span>
+            I&apos;m  <span className="text-blue-900">{words[currentWordIndex]}</span>
           </motion.h1>
         ) : (
           <motion.h1
@@ -73,7 +73,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Hi, I'm <span className="text-blue-900">Puniti Jodhwani</span>
+            Hi, I am <span className="text-blue-900">Puniti Jodhwani</span>
           </motion.h1>
         )}
       </AnimatePresence>
@@ -94,7 +94,7 @@ export default function Home() {
         href="#contact"
         className="bg-[#BFCBCE] hover:bg-[#BAE4F0] text-blue-900 text-lg sm:text-xl px-6 py-3 rounded-full font-semibold transition shadow"
       >
-        Let's Connect
+        Let&apos;s Connect
       </a>
       <a
         href="/images/resume.pdf"

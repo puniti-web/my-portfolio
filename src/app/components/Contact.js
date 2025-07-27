@@ -14,7 +14,7 @@ export default function ContactSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Let's Collaborate and build Something Exciting
+        Let&apos;s Collaborate and build Something Exciting
       </motion.h2>
 
       <motion.div

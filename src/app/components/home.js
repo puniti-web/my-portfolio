@@ -99,14 +99,14 @@ export default function Home() {
     at VIT,Vellore.With a background in Bioinformatics, I bridge the gap between biology and technology, 
     bringing a unique perspective to problem-solving in the tech world.My journey in web development started with curiosity and quickly turned into a deep interest in creating user-friendly, accessible interfaces.
 
-Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exploring creative ways to connect technology with real-world impact. I'm always looking to grow, take on new challenges, and contribute to projects that inspire change.
+Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exploring creative ways to connect technology with real-world impact. I am always looking to grow, take on new challenges, and contribute to projects that inspire change.
     
   </p>
 
 
           <h2 className="text-3xl font-semibold mb-2">Experiences:</h2>
           <ul className="list-disc list-inside space-y-2 text-left text-base md:text-xl">
-            <li>Vice-Chairperson at <strong>The Whitehat's Club</strong> (Cybersecurity, VIT)</li>
+            <li>Vice-Chairperson at <strong>The Whitehat&apos;s Club</strong> (Cybersecurity, VIT)</li>
             <li>Tech Executive at <strong>Entrepreneurship Cell</strong>, VIT</li>
             <li>Marketing Intern at <strong>MyPerro</strong> (VIT Startup)</li>
             <li>Web Development Intern at <strong>Bluestock Fintech</strong></li>
@@ -233,17 +233,21 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
       <h3 className="text-2xl font-semibold mb-4">Frontend</h3>
       <div className="flex flex-wrap gap-4">
         {[
-          <i className="devicon-html5-plain colored text-3xl" />,
-          <i className="devicon-css3-plain colored text-3xl" />,
-          <i className="devicon-javascript-plain colored text-3xl" />,
-          <i className="devicon-react-original colored text-3xl" />,
-          <span className="text-blue-900 italic bold text-lg">Streamlit</span>
+          { type: 'icon', class: 'devicon-html5-plain' },
+          { type: 'icon', class: 'devicon-css3-plain' },
+          { type: 'icon', class: 'devicon-javascript-plain' },
+          { type: 'icon', class: 'devicon-react-original' },
+          { type: 'text', label: 'Streamlit' }
         ].map((item, index) => (
           <div
-            key={index}
+            key={`frontend-${index}`}
             className="bg-white px-4 py-2 rounded-lg shadow-md flex items-center justify-center min-w-[80px]"
           >
-            {item}
+            {item.type === 'icon' ? (
+              <i className={`${item.class} colored text-3xl`} />
+            ) : (
+              <span className="text-blue-900 italic font-bold text-lg">{item.label}</span>
+            )}
           </div>
         ))}
       </div>
@@ -254,18 +258,18 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
       <h3 className="text-2xl font-semibold mb-4">Backend</h3>
       <div className="flex flex-wrap gap-4">
         {[
-          <i className="devicon-nodejs-plain colored text-3xl" />,
-          <i className="devicon-typescript-plain colored text-3xl" />,
-          <i className="devicon-express-original colored text-3xl" />,
-          <i className="devicon-mongodb-plain colored text-3xl" />,
-          <i className="devicon-mysql-plain colored text-3xl" />,
-          <i className="devicon-postgresql-plain colored text-3xl" />
-        ].map((item, index) => (
+          'devicon-nodejs-plain',
+          'devicon-typescript-plain',
+          'devicon-express-original',
+          'devicon-mongodb-plain',
+          'devicon-mysql-plain',
+          'devicon-postgresql-plain'
+        ].map((iconClass, index) => (
           <div
-            key={index}
+            key={`backend-${index}`}
             className="bg-white px-4 py-2 rounded-lg shadow-md flex items-center justify-center min-w-[80px]"
           >
-            {item}
+            <i className={`${iconClass} colored text-3xl`} />
           </div>
         ))}
       </div>
@@ -276,15 +280,15 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
       <h3 className="text-2xl font-semibold mb-4">Tools & Platforms</h3>
       <div className="flex flex-wrap gap-4">
         {[
-          <i className="devicon-git-plain colored text-3xl" />,
-          <i className="devicon-github-original colored text-3xl" />,
-          <i className="devicon-vscode-plain colored text-3xl" />,
-        ].map((item, index) => (
+          'devicon-git-plain',
+          'devicon-github-original',
+          'devicon-vscode-plain'
+        ].map((iconClass, index) => (
           <div
-            key={index}
+            key={`tools-${index}`}
             className="bg-white px-4 py-2 rounded-lg shadow-md flex items-center justify-center min-w-[80px]"
           >
-            {item}
+            <i className={`${iconClass} colored text-3xl`} />
           </div>
         ))}
       </div>
@@ -295,17 +299,17 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
       <h3 className="text-2xl font-semibold mb-4">Other Programming Languages</h3>
       <div className="flex flex-wrap gap-4">
         {[
-          <i className="devicon-python-plain colored text-3xl" />,
-          <i className="devicon-c-plain colored text-3xl" />,
-          <i className="devicon-cplusplus-plain colored text-3xl" />,
-          <i className="devicon-java-plain colored text-3xl" />,
-          <i className="devicon-r-plain colored text-3xl" />
-        ].map((item, index) => (
+          'devicon-python-plain',
+          'devicon-c-plain',
+          'devicon-cplusplus-plain',
+          'devicon-java-plain',
+          'devicon-r-plain'
+        ].map((iconClass, index) => (
           <div
-            key={index}
+            key={`lang-${index}`}
             className="bg-white px-4 py-2 rounded-lg shadow-md flex items-center justify-center min-w-[80px]"
           >
-            {item}
+            <i className={`${iconClass} colored text-3xl`} />
           </div>
         ))}
       </div>
@@ -322,8 +326,8 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
           'Data Visualization'
         ].map((text, index) => (
           <div
-            key={index}
-            className="bg-white px-4 py-2 rounded-lg shadow-md text-blue-900 bold  italic min-w-[150px] text-center"
+            key={`domain-${index}`}
+            className="bg-white px-4 py-2 rounded-lg shadow-md text-blue-900 font-bold italic min-w-[150px] text-center"
           >
             {text}
           </div>
@@ -332,6 +336,7 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
     </div>
   </div>
 </section>
+
 
 
       {/* Certifications Section */}
