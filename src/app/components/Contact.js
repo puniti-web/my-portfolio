@@ -25,7 +25,7 @@ export default function ContactSection() {
       >
         {/* GitHub */}
         <a
-          href="https://github.com/your-github-username"
+          href="https://github.com/puniti-web"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#BFCBCE] text-blue-900 p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transform transition-all duration-300"
@@ -37,7 +37,7 @@ export default function ContactSection() {
 
         {/* Email */}
         <a
-          href="mailto:your.email@example.com"
+          href="mailto:punitijodhwani29@gmail.com"
           className="bg-[#BFCBCE] text-blue-900 p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transform transition-all duration-300"
         >
           <FaEnvelope size={40} className="mx-auto mb-3" />
@@ -47,7 +47,7 @@ export default function ContactSection() {
 
         {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com/in/your-linkedin-id/"
+          href="https://www.linkedin.com/in/puniti-jodhwani-73155a28b"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#BFCBCE] text-blue-900 p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transform transition-all duration-300"

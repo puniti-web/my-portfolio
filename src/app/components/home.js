@@ -41,6 +41,14 @@ export default function Home() {
       desc: 'An upcoming upgrade to MS-LAMP, a standalone tool designed to analyze and interpret lipidomics data from ESI (Electrospray Ionization) and MALDI (Matrix-Assisted Laser Desorption/Ionization) mass spectrometry techniques.The improved version focuses on:Enhanced data preprocessing and filtering algorithmsA more intuitive user interface for lipid identification ,Integration of visual plots and exportable reports for researchers ,Optimized performance to handle large-scale MS datasets efficiently',
        tech: 'Python,Numpy'
     },
+    {
+      images: ['/images/project5.png'],
+      alt: 'SOVA-Smart Online Vitality Arena',
+      desc: 'SOVA is a smart, gamified fitness and health platform developed during a hackathon. Inspired by platforms like CultFit, SOVA enables users to stay fit from home through personalized workout plans, live challenges, and real-time health monitoring using IoT devices. It also integrates teleconsultation features, allowing users to connect with certified doctors for fitness and wellness guidance — all from a single platform.',
+       tech: 'React,tailwind',
+       codeLink: 'https://github.com/puniti-web/SOVA',
+       driveLink: 'https://drive.google.com/drive/folders/1NhiAK2jgA9D9PGSc9ft_PBA7MRTHAKvr?usp=sharing'
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -114,56 +122,68 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
         </div>
       </section>
 
-    {/*  Projects Section */}
-      <section id="projects" className="py-20 bg-[#84A7BA] text-white scroll-mt-24">
-        <h2 className="text-5xl font-bold mb-12 text-center">Projects</h2>
+   {/* Projects Section */}
+<section id="projects" className="py-20 bg-[#84A7BA] text-white scroll-mt-24">
+  <h2 className="text-5xl font-bold mb-12 text-center">Projects</h2>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-2 gap-12 px-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-[#BFCBCE] backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:scale-[1.02] transition-transform duration-300"
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 px-6">
+    {projects.map((project, index) => (
+      <div
+        key={index}
+        className="bg-[#BFCBCE] backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:scale-[1.02] transition-transform duration-300"
+      >
+        {/* Project Image */}
+        <img
+          src={project.images[0]}
+          alt={project.alt}
+          className="w-full h-auto object-cover rounded-lg"
+        />
+
+        {/* Project Content */}
+        <div className="p-6 flex flex-col h-full">
+          <h3 className="text-3xl font-bold mb-4 text-blue-900">{project.alt}</h3>
+          <p className="text-lg leading-relaxed mb-4 text-blue-900">{project.desc}</p>
+
+          {/* Tech Stack */}
+          <div className="flex flex-wrap gap-3 mb-4">
+            {project.tech?.split(',').map((tech, i) => (
+              <span
+                key={i}
+                className="bg-white/10 text-blue-900 border border-white px-4 py-1 rounded-full text-sm font-semibold"
+              >
+                {tech.trim()}
+              </span>
+            ))}
+          </div>
+
+          {/* Source Code Button */}
+          {project.codeLink && (
+            <a
+              href={project.codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-blue-900 font-bold text-sm px-5 py-2 rounded-full hover:bg-gray-200 transition"
             >
-              {/* Project Image */}
-              <img
-                src={project.images[0]}
-                alt={project.alt}
-                className="w-full h-[400px] object-cover"
-              />
+              View Source Code →
+            </a>
+          )}
 
-              {/* Project Content */}
-              <div className="p-6 flex flex-col h-full">
-                <h3 className="text-3xl font-bold mb-4 text-blue-900">{project.alt}</h3>
-                <p className="text-lg leading-relaxed mb-4 text-blue-900">{project.desc}</p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-3 mb-4">
-                  {project.tech?.split(',').map((tech, i) => (
-                    <span
-                      key={i}
-                      className="bg-white/10 text-blue-900 border border-white px-4 py-1 rounded-full text-sm font-semibold"
-                    >
-                      {tech.trim()}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Source Code Button */}
-                {project.codeLink && (
-                  <a
-                    href={project.codeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-blue-900 font-bold text-sm px-5 py-2 rounded-full hover:bg-gray-200 transition"
-                  >
-                    View Source Code →
-                  </a>
-                )}
-              </div>
-            </div>
-          ))}
+          {/* Drive Link Button */}
+          {project.driveLink && (
+            <a
+              href={project.driveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-blue-900 font-bold text-sm px-5 py-2 rounded-full hover:bg-gray-200 transition mt-2"
+            >
+              View Drive Docs →
+            </a>
+          )}
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
 
 
 {/* Education Section */}
@@ -181,11 +201,11 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
       <div className="w-full md:w-1/2 md:pr-10 mb-8  md:mb-0">
         <div className="bg-opacity-100 backdrop-blur-lg bg-[#BFCBCE] p-6 rounded-xl shadow-lg border-4">
           <h3 className="text-xl md:text-2xl text-blue-900 font-bold mb-2">JPV DAV Public School <span className="text-sm font-normal">(till 2021)</span></h3>
-          <span className="text-blue-900">Stream:PCM</span> 
+          
           <span className="text-blue-900">Class 10 Score:95%</span>
 
           <h3 className="text-xl md:text-2xl font-bold mt-6 text-blue-900 mb-2">Sanskar Bharti Public School <br className="block md:hidden" /> <span className="text-sm font-normal">(2021–2023)</span></h3>
-          <span className="text-blue-900">Stream:95%</span> 
+          <span className="text-blue-900">Stream:PCM</span> <br></br>
           <span className="text-blue-900">Class 12 Score:90%</span> 
         </div>
       </div>
@@ -367,7 +387,7 @@ Beyond code, I enjoy anchoring events, collaborating with entrepreneurs, and exp
       {
         title: "Best Women's Team",
         org: 'MUNSOC, VIT',
-        img: '/images/c5.png',
+        img: '/images/c5.jpg',
       },
       {
         title: "Yuvamanthan Internal Hackhathon",
